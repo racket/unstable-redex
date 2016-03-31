@@ -7,14 +7,13 @@
 
 (define deps '("base"
                "pict-lib"
-               "redex-gui-lib"
-               "scribble-lib"
-               "unstable-lib"))
+               "redex-lib"
+               "redex-pict-lib"
+               "scribble-lib"))
 
 (define build-deps '("pict-doc"
                      "redex-doc"
-                     "racket-doc"
-                     "unstable-doc"))
+                     "racket-doc"))
 
 (define pkg-desc "Experimental libraries for typesetting PLT Redex models")
 

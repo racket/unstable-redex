@@ -1,14 +1,17 @@
 #lang scribble/manual
 @(require racket/stxparam scribble/base scribble/eval
-          unstable/scribblings/utils
           (for-syntax racket/base syntax/srcloc)
-          (for-label racket/base racket/contract pict redex unstable/gui/redex))
+          (for-label racket/base racket/contract pict 
+                     redex/reduction-semantics redex/pict unstable/gui/redex))
 
 @(define the-eval (make-base-eval))
 @(the-eval '(require redex/reduction-semantics redex/pict unstable/gui/redex pict))
 
-@unstable-title[#:tag "redex"]{Redex}
-@unstable-header[]
+@title[#:tag "redex"]{Unstable Redex: May Change Without Warning}
+
+This library is @emph{unstable}; compatibility will not be maintained.
+See @other-doc['(lib "unstable/scribblings/unstable.scrbl") #:indirect "Unstable"]
+for more information.
 
 @defmodule[unstable/gui/redex]
 
