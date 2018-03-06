@@ -41,11 +41,13 @@
          #:parenthesize-right (or/c #t #f (listof symbol?) (-> lw? any/c))]
         compound-rewriter/c)]
   [prefix-rw
-   (-> content/c
-       compound-rewriter/c)]
+   (->* [content/c]
+        [#:parenthesize-arg (or/c #t #f (listof symbol?) (-> lw? any/c))]
+        compound-rewriter/c)]
   [postfix-rw
-   (-> content/c
-       compound-rewriter/c)]
+   (->* [content/c]
+        [#:parenthesize-arg (or/c #t #f (listof symbol?) (-> lw? any/c))]
+        compound-rewriter/c)]
   [function-rw
    (-> content/c
        compound-rewriter/c)]
